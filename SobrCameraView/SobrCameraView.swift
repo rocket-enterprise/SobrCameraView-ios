@@ -127,7 +127,7 @@ public class SobrCameraView: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
         self.captureSession.addOutput(self.stillImageOutput)
         
         let connection = dataOutput.connections.first as! AVCaptureConnection
-        connection.videoOrientation = .Portrait
+        connection.videoOrientation = .LandscapeRight
         
         if self.captureDevice!.flashAvailable {
             try! self.captureDevice?.lockForConfiguration()
